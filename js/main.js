@@ -181,7 +181,12 @@ window.onload = function () {
         heart.kill();
 
         live = lives.getFirstAlive();
-        
+        if (live)
+        {
+            live.kill();
+            player.animations.stop();
+            player.frame = 0;
+        }
         if (lives.countLiving() < 1)
         {
             player.kill();
