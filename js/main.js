@@ -14,7 +14,6 @@ window.onload = function () {
 <<<<<<< Updated upstream
     var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update});
 =======
-    var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
 >>>>>>> Stashed changes
 
     function preload() {
@@ -26,9 +25,6 @@ window.onload = function () {
         game.load.image('sky', 'assets/sky.jpg');
 <<<<<<< Updated upstream
 =======
-        game.load.image('grass', 'assets/grass.jpg');
-        game.load.image('zdog', 'assets/zombiedog.jpg');
-        game.load.spritesheet('dude', 'assets/guy running.png', 108, 140);
 
 >>>>>>> Stashed changes
     }
