@@ -11,10 +11,9 @@ window.onload = function () {
     // loading functions to reflect where you are putting the assets.
     // All loading functions will typically all be found inside "preload()".
     'use strict';
-<<<<<<< Updated upstream
+
     var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update});
-=======
->>>>>>> Stashed changes
+
 
     function preload() {
 
@@ -23,10 +22,7 @@ window.onload = function () {
         game.load.image('cat', 'assets/black_cat.png');
         game.load.image('box', 'assets/box.png');
         game.load.image('sky', 'assets/sky.jpg');
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     }
     var player;
     var cats;
@@ -52,7 +48,6 @@ window.onload = function () {
     function create() {
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
-<<<<<<< Updated upstream
 
         sky = game.add.tileSprite(0, 0, 800, 600, 'sky');
 
@@ -95,27 +90,8 @@ window.onload = function () {
         stateText.anchor.setTo(0.5, 0.5);
         stateText.visible = false;
 
-        for (var i = 0; i < 3; i++) 
-=======
-        game.add.sprite(0, 0, 'sky');
-        grass = game.add.group();
-        grass.enableBody = true;
-        var ground = grass.create(0, game.world.height - 64, 'grass');
-        ground.scale.setTo(2, 2);
-        ground.body.immovable = true;
-        var hill = grass.create(400, 385, 'grass');
-        hill.body.immovable = true;
-        player = game.add.sprite(103, game.world.height - 199, 'dude');
-        game.physics.arcade.enable(player);
-        player.body.bounce.y = 0.2;
-        player.body.gravity.y = 300;
-        player.body.collideWorldBounds = true;
-        player.animations.add('left', [8, 9, 10, 11, 12, 13, 14, 15], 10, true);
-        player.animations.add('right', [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
-        zdogs = game.add.group();
-        zdogs.enableBody = true;
-        for (var i = 0; i < 1; i++)
->>>>>>> Stashed changes
+
+        for (var i = 0; i < 3; i++)
         {
             var box = lives.create(game.world.width - 100 + (30 * i), 60, 'box');
             box.anchor.setTo(0.5, 0.5);
@@ -205,18 +181,7 @@ window.onload = function () {
         heart.kill();
 
         live = lives.getFirstAlive();
-
-        if (live)
-        {
-<<<<<<< Updated upstream
-            live.kill();
-=======
-            player.animations.stop();
-            player.frame = 0;
->>>>>>> Stashed changes
-        }
-
-
+        
         if (lives.countLiving() < 1)
         {
             player.kill();
